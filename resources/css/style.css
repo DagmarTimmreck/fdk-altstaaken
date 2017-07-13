@@ -3,8 +3,9 @@
 }
 
 html {
-  font-size: 20px;
-  background-color: #F6F6F6;
+  font-family: "Arial", "Helvetica", "Univers", "Zurich BT", sans-serif;
+  font-size: 18px;
+  background-color: cornsilk;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
   width: 100%;
   height: 6rem;
   padding: 0.5rem 1rem;
-  background-color: #8BEDC3;
+  background-color: lightblue;
 }
 
 .logo-group {
@@ -29,6 +30,7 @@ header {
 .logo-group span {
   display: block;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .logo-group img {
   height: 5rem;
@@ -39,9 +41,30 @@ nav {
   display: block;
 }
 
-nav a {
-  padding-left: 1rem;
-  color: #6C5E6B;
+a {
+  display: inline-block;
+  background-color: mediumpurple;
+  padding: 1rem;
+  border: 0.25rem mediumpurple solid;
+  border-radius: 0.5rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 1s;
+}
+
+a:hover,
+a:focus {
+  color: black;
+  background-color: cornsilk;
+  outline: none;
+}
+
+a:active {
+  position: relative;
+  top: 0.5rem;
+  left: 0.1rem;
 }
 
 main, footer {
@@ -76,13 +99,12 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
+  margin: 0;
   font-size: 2rem;
   text-align: center;
 }
 
 h3 {
-  margin: 0;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -99,8 +121,11 @@ h5 {
 }
 
 .aktuell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem 3rem;
-  background-color: #8BEDC3;
+  background-color: lightblue;
 }
 
 .konzert {
@@ -115,8 +140,12 @@ h5 {
 }
 
 .termin {
+  font-family: "Arial", "Helvetica", "Univers", "Zurich BT", sans-serif;
   width: 8rem;
-  height: 8rem;
+  height: 9rem;
+  border-top: 0.5rem solid mediumpurple;
+  border-radius: 0.25rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem mediumpurple;
   line-height: 1.5;
   text-align: center;
   background-color: #F6F6F6;
@@ -124,6 +153,7 @@ h5 {
 
 .datum-tag {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 table {
@@ -131,4 +161,46 @@ table {
 }
 td {
   padding: 0 1rem;
+}
+
+address {
+  display: block;
+  width: 30rem;
+  padding: 2rem 0;
+}
+
+address p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10rem;
+  background-color: lightblue;
+}
+
+@media only screen and (max-width: 1350px) {
+  header {
+    flex-direction: column;
+    height: 8rem;
+  }
+
+  .logo-group span {
+    font-size: 2rem;
+  }
+  nav a {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  main, footer {
+    top: 8rem;
+  }
 }
